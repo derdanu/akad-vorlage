@@ -10,6 +10,7 @@ pdflatex vorlage
 
 pdflatex vorlage
 
+Latex Portable Umgebung für Windows http://miktex.org/portable
 
 Unter Linux reicht auch eine einfaches "make"
 
