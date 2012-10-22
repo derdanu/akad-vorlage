@@ -1,17 +1,18 @@
+filename = vorlage
 all: latex clean
 latex:
-	pdflatex vorlage
-	bibtex vorlage
-	pdflatex vorlage
-	pdflatex vorlage
+	pdflatex $(filename)
+	bibtex $(filename)
+	pdflatex $(filename)
+	pdflatex $(filename)
 
 view:
-	evince vorlage.pdf
+	evince $(filename).pdf
 clean:
-	rm vorlage.aux
-	rm vorlage.bbl
-	rm vorlage.blg
-	rm vorlage.lot
-	rm vorlage.lof
-	rm vorlage.log
-	rm vorlage.toc
+	rm $(filename).aux
+	rm $(filename).bbl
+	rm $(filename).blg
+	rm $(filename).lot
+	rm $(filename).lof
+	rm $(filename).log
+	rm $(filename).toc
