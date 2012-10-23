@@ -7,7 +7,12 @@ latex:
 	pdflatex $(filename)
 
 view:
-	evince $(filename).pdf
+	if [ -f $(filename).pdf ]; then \
+		evince $(filename).pdf; \
+	else \
+		$(MAKE) all ;\
+		$(MAKE) view ;\
+	fi
 clean:
 	rm $(filename).aux
 	rm $(filename).bbl
@@ -16,3 +21,7 @@ clean:
 	rm $(filename).lof
 	rm $(filename).log
 	rm $(filename).toc
+
+distclean:
+	rm $(filename).pdf
+	$(MAKE) clean
