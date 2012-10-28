@@ -18,6 +18,15 @@ Latex Portable Umgebung für Windows http://miktex.org/portable
 Linux
 -----
 
-Unter Linux reicht auch eine einfaches "make"
+Es reicht eine einfaches "make" zum Erstellen der PDF. 
 
+"make view" erstellt und zeigt diese auch sofort an.
 
+Mac OS X 
+--------
+
+Es reicht eine einfaches "make" zum Erstellen der PDF. 
+
+"make view" erstellt und zeigt diese auch sofort an.
+
+Um make zu nutzen müssen die XCode Developer Commandline Tools installiert sein.
