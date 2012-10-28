@@ -1,5 +1,5 @@
-AKAD Vorlage für ein Assignment
-===============================
+AKAD Latex Vorlage für ein Assignment
+=====================================
 
 Zum Erstellen folgende Latex Kommandos ausführen:
 
@@ -13,7 +13,9 @@ Zum Erstellen folgende Latex Kommandos ausführen:
 Windows
 -------
 
-Latex Portable Umgebung für Windows http://miktex.org/portable
+Latex Portable Umgebung 
+	
+	http://miktex.org/portable
 
 Linux
 -----
