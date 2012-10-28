@@ -13,9 +13,7 @@ Zum Erstellen folgende Latex Kommandos ausführen:
 Windows
 -------
 
-Latex Portable Umgebung 
-	
-	http://miktex.org/portable
+Latex Portable Umgebung http://miktex.org/portable
 
 Linux
 -----
