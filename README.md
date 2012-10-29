@@ -1,5 +1,4 @@
-AKAD Latex Vorlage für ein Assignment
-=====================================
+# AKAD Latex Vorlage für ein Assignment
 
 Zum Erstellen folgende Latex Kommandos ausführen:
 
@@ -10,23 +9,29 @@ Zum Erstellen folgende Latex Kommandos ausführen:
 
 
 
-Windows
+## Windows
 -------
 
-Latex Portable Umgebung http://miktex.org/portable
+* Latex Portable Umgebung http://miktex.org/portable
 
-Linux
+## Linux
 -----
 
 Es reicht eine einfaches "make" zum Erstellen der PDF. 
 
 "make view" erstellt und zeigt diese auch sofort an.
 
-Mac OS X 
+* Benötigte Packete bei einem Debian System installieren
+  * aptitude install git texlive textlive-lang-german textlive-latex-extra bibtex
+
+
+## Mac OS X 
 --------
 
 Es reicht eine einfaches "make" zum Erstellen der PDF. 
 
 "make view" erstellt und zeigt diese auch sofort an.
 
-Um make zu nutzen müssen die XCode Developer Commandline Tools installiert sein.
+* Benötigte Packete
+  * Um make nutzen zu können müssen die XCode Developer Commandline Tools installiert sein. https://developer.apple.com/xcode/
+  * Latex Umgebung http://www.tug.org/mactex/
