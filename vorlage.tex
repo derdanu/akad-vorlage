@@ -34,8 +34,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage{float} % Notwendig fuer figure[h]
-
+\usepackage[printonlyused]{acronym}
 \renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
 
 \makeatother
 
@@ -81,6 +82,13 @@ max.mustermann@akad.de
 \tableofcontents % Inhaltsverzeichnis
 \listoffigures % Abbildungsverzeichnis
 \listoftables % Tabellenverzeichnis
+%Abkürzungsverzeichnis
+\section*{Abkürzungsverzeichnis}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis} 
+\begin{acronym}[ABK]
+ \acro{Abk}{Abkürzungen}
+ \acro{Test}{Wird nicht im Text verwendet und taucht auch nicht im Verzeichnis auf}
+\end{acronym}
 \end{spacing} 
 
 \clearpage
@@ -99,7 +107,6 @@ max.mustermann@akad.de
 
 \section{Einleitung}
 \subsection{Einführung in das Thema}
-
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 \subsection{Problemstellung und Ziel dieser Arbeit}
@@ -169,6 +176,9 @@ http://www.literatur-generator.de/
 \caption{Akad}
 \end{center}
 \end{figure}
+
+\subsubsection{Abkürzungen}
+Hier werden \ac{Abk} aus dem Verzeichnis aufgerufen und gleich nochmal die gleiche \ac{Abk}.
 
 \section{Hauptteil}
 
