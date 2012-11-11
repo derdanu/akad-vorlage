@@ -30,14 +30,7 @@ view:
 		$(MAKE) view ;\
 	fi
 clean:
-	rm $(filename).aux
-	rm $(filename).bbl
-	rm $(filename).blg
-	rm $(filename).lot
-	rm $(filename).lof
-	rm $(filename).log
-	rm $(filename).toc
-
+	git clean -fx
 distclean:
-	rm $(filename).pdf
+	git checkout -f master
 	$(MAKE) clean
