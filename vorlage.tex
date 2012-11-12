@@ -35,7 +35,16 @@
 \usepackage{fancyhdr}
 \usepackage{float} % Notwendig fuer figure[h]
 \usepackage[printonlyused]{acronym}
-\usepackage[hyperfootnotes=false,colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+\usepackage[
+	pdftitle={Titel des Dokuments},
+	pdfsubject={Eine kurze Beschreibung, worum es geht},
+	pdfauthor={Max Mustermann},
+	pdfkeywords={akad, assignment, meta, information, pdf, hyperref, latex}
+	hyperfootnotes=false,
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=black
+]{hyperref}
 
 \renewcommand{\familydefault}{\rmdefault}
 \renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
