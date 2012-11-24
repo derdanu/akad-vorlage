@@ -221,6 +221,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 \thispagestyle{empty}
 \clearpage
+
 \begin{center}
 {\Large Eidesstattliche Erkl"arung}
 \vspace*{4cm}\end{center}
@@ -234,6 +235,31 @@ Ich versichere, dass ich das beiliegende Assignment selbstst"andig verfasst, kei
 \rule[0.5ex]{6.5cm}{1pt}
 (Datum, Ort)
 \hspace{6.3cm}(Unterschrift)
+
+\clearpage
+
+%Messbox zur Druckkontrolle:
+\newcommand{\Messbox}[2]{% Parameters: #1=Breite, #2=Hoehe
+\setlength{\unitlength}{1.0mm}%
+\begin{picture}(#1,#2)%
+\linethickness{0.05mm}%
+\put(0,0){\dashbox{0.2}(#1,#2)%
+{\parbox{#1mm}{%
+\centering\footnotesize 
+%{\bf MESSBOX}\\ 
+Breite $ = #1 {\rm\ mm}$\\
+H\"ohe $ = #2 {\rm\ mm}$
+}}}\end{picture}
+}
+
+\begin{center}
+\textbf{--- Druckgröße kontrollieren! ---}
+\\
+\Messbox{100}{50} % Angabe der Breite/Hoehe in mm
+\\
+\textbf{--- Diese Seite nach dem Druck entfernen! ---}
+\end{center}
+
 
 \end{document}
 
