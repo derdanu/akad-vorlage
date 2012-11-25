@@ -11,7 +11,8 @@ Dateien
 	schluss.tex
 		Schluss
 	literatur.bib
-		Literatur in BibTex Syntax. Zitatsgenerator http://www.literatur-generator.de/
+		Literatur in BibTex Syntax. 
+		- Zitatsgenerator http://www.literatur-generator.de/
 	abkuerzungen.tex
 		Abkürzungverzeichniss
 	einstellungen.tex
