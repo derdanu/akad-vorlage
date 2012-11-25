@@ -1,16 +1,19 @@
 # AKAD Latex Vorlage für ein Assignment
 
-einleitung.tex 
-	Einleitung
-grundlagen.tex
-	Grundlagen
-hauptteil.tex
-	Hauptteil
-schluss.tex
-	Schluss
-literatur.bib
-	Literatur in BibTex Syntax. Zitatsgenerator http://www.literatur-generator.de/
+Dateien
 
+	einleitung.tex 
+		Einleitung
+	grundlagen.tex
+		Grundlagen
+	hauptteil.tex
+		Hauptteil
+	schluss.tex
+		Schluss
+	literatur.bib
+		Literatur in BibTex Syntax. Zitatsgenerator http://www.literatur-generator.de/
+	einstellungen.tex
+		Einstellungen
 
 
 Zum Erstellen folgende Latex Kommandos ausführen:
