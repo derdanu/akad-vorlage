@@ -35,8 +35,14 @@
 \usepackage{fancyhdr}
 \usepackage{float} % Notwendig fuer figure[h]
 \usepackage[printonlyused]{acronym}
+
+\newif\iflistoffigures
+\newif\iflistoftables
+\newif\ifacronym
+
+\include{einstellungen}
 \usepackage[
-	pdftitle={Titel des Dokuments},
+	pdftitle={\Titel},
 	pdfsubject={Eine kurze Beschreibung, worum es geht},
 	pdfauthor={Max Mustermann},
 	pdfkeywords={akad, assignment, meta, information, pdf, hyperref, latex}
@@ -45,6 +51,8 @@
 	linkcolor=black,
 	urlcolor=black
 ]{hyperref}
+
+
 
 \renewcommand{\familydefault}{\rmdefault}
 \renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
@@ -60,26 +68,26 @@
 \thispagestyle{empty}
 \vspace{9cm}
 
-\Huge{Überschrift}
+\Huge{\Titel}
 \vspace{1cm}
 \onehalfspacing
 
-\Large{Assignment im Modul ABC01 - \\ Vorlage \LaTeX{}}
+\Large{\Betreff}
 
 \vspace{1cm}
-\Large{Betreuer: Prof. Dr. Mustermann \\}
+\Large{\Betreuer \\}
 \normalsize
 \vspace{2cm}
 
-Max Mustermann\\Musterstr. 1a\\12345 Musterhausen
+\Name \\ \Strasse \\ \PlzOrt
 \\
 \vspace{2cm}
 
 \today
 
-Immatrikulationsnummer: 123456
+Immatrikulationsnummer: \Immatrikulationsnummer
 
-\href{mailto:max.mustermann@akad.de}{max.mustermann@akad.de}
+\href{mailto:\Email}{\Email}
 \vspace{3cm}
 
 \includegraphics[scale=0.35]{akad_logo.png}
@@ -93,19 +101,33 @@ Immatrikulationsnummer: 123456
 
 \begin{spacing}{1.0} % Verzeichnisse werden mit einzeiligem Abstand gesetzt
 \newpage
-\tableofcontents % Inhaltsverzeichnis
+
+% Inhaltsverzeichnis
+\tableofcontents 
 \newpage
-\listoffigures % Abbildungsverzeichnis
+
+% Abbildungsverzeichnis
+\iflistoffigures
+\listoffigures 
 \newpage
-\listoftables % Tabellenverzeichnis
+\fi
+
+% Tabellenverzeichnis
+\iflistoftables
+\listoftables 
 \newpage
-%Abkürzungsverzeichnis
+\fi
+
+% Abkürzungsverzeichnis
+\ifacronym
 \section*{Abkürzungsverzeichnis}
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis} 
 \begin{acronym}[ABK]
  \acro{Abk}{Abkürzungen}
  \acro{Test}{Wird nicht im Text verwendet und taucht auch nicht im Verzeichnis auf}
 \end{acronym}
+\fi
+
 \end{spacing} 
 
 \clearpage
@@ -116,7 +138,7 @@ Immatrikulationsnummer: 123456
 
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[LO,RE]{\textsc{Überschrift überall}}
+\fancyhead[LO,RE]{\textsc{\Titel}}
 \fancyhead[RO,LE]{\thepage}
 \fancyfoot[CO,CE]{}
 
