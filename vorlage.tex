@@ -125,96 +125,19 @@ Immatrikulationsnummer: 123456
 \pagenumbering{arabic}
 
 
-\section{Einleitung}
-\subsection{Einführung in das Thema}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-\subsection{Problemstellung und Ziel dieser Arbeit}
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-\subsection{Aufbau der Arbeit}
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-\section{Grundlagen}
-\subsection{Text}
-
-\subsubsection{Fett}
-\textbf{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.}
-
-\subsubsection{Kursiv}
-\textit{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.}
-
-\subsubsection{Unterstrichen}
-orem ipsum \underline{dolor} sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod \underline{tempor} invidunt ut labore et dolore magna \underline{aliquyam} erat, sed diam voluptua.
-
-\subsection{Fußnote}
-
-Text mit Fußnote \footnote{Die Fußnote zum Text} 
-
-\subsection{Zitate}
-
-Dies ist ein ganz kurzer Beispieltext \footnote{\cite{Baeumle-Courth2004}}. Und noch ein weites Zitat \footnote{\cite{Torvalds2001}}
-\\
-http://www.literatur-generator.de/
-
-\subsection{Aufzählung}
-
-\begin{itemize}
-\item\textit{Punkt 1:} Text
-\item Punkt 2: Text
-\item Punkt 3: \\ Text
-\end{itemize}
-
-\subsection{Abkürzungen}
-Hier werden \ac{Abk} aus dem Verzeichnis aufgerufen und gleich nochmal die gleiche \ac{Abk}.
-
-\section{Hauptteil}
-
-\subsection{Tabelle}
-
-\begin{center}
-\tablehead{ \textbf{Head1} & \textbf{Head2} & \textbf{Head3}
-\\ }
-\bottomcaption[Beschreibung]{Beschreibung. Quelle: Berger, Vorlesung, 2012, München }
-\begin{supertabular}{c|c|c}
-\hline
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9 \\
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9 \\
-\end{supertabular}
-\end{center}
-
-\subsection{Bilder}
-
-\begin{figure}[H]
-\begin{center}
-\includegraphics[scale=0.5]{akad_bild1.jpg}
-\caption[Akad]{Akad. Quelle: www.akad.de}
-\end{center}
-\end{figure}
+\include{einleitung}
 
 
-\section{Bewertung}
+\include{grundlagen}
 
-\subsection{Zusammenfassung}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-\subsection{kritische Würdigung}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\include{hauptteil}
 
-\subsection{Ausblick}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-\subsection{Erfolgsfaktoren}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\include{schluss}
+
 
 \clearpage
-
 
 % Literaturverzeichniss - Ab hier wieder Roemische Seitenzahlen
 \pagestyle{plain}
