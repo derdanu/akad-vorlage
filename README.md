@@ -12,8 +12,12 @@ Dateien
 		Schluss
 	literatur.bib
 		Literatur in BibTex Syntax. Zitatsgenerator http://www.literatur-generator.de/
+	abkuerzungen.tex
+		Abkürzungverzeichniss
 	einstellungen.tex
 		Einstellungen
+		- Benutzer
+		- Anzeige der jeweiligen Verzeichnisse
 
 
 Zum Erstellen folgende Latex Kommandos ausführen:
