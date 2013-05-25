@@ -47,7 +47,7 @@
 	pdfauthor={Max Mustermann},
 	pdfkeywords={akad, assignment, meta, information, pdf, hyperref, latex}
 	hyperfootnotes=false,
-	colorlinks=true,
+	colorlinks=false,
 	linkcolor=black,
 	urlcolor=black
 ]{hyperref}
@@ -141,6 +141,7 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 
 \pagenumbering{arabic}
 
+\begin{spacing}{1.5} % Zeilenabstand: 1,5 fuer den Textteil
 
 \include{einleitung}
 
@@ -153,6 +154,7 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 
 \include{schluss}
 
+\end{spacing}
 
 \clearpage
 
