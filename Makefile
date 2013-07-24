@@ -1,11 +1,14 @@
 filename = vorlage
 
+neededfiles = vorlage.tex abkuerzungen.tex einleitung.tex einstellungen.tex grundlagen.tex hauptteil.tex schluss.tex literatur.bib
+
+
 UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S), Linux)
 	pdflatexcmd = pdflatex
 	bibtexcmd = bibtex
-	pdfviewercmd = evince
+	pdfviewercmd = atril
 endif
 
 ifeq ($(UNAME_S), Darwin)
@@ -15,7 +18,7 @@ ifeq ($(UNAME_S), Darwin)
 endif
 
 
-all: latex clean
+all: $(neededfiles) latex clean
 latex:
 	$(pdflatexcmd) $(filename)
 	$(bibtexcmd) $(filename)
