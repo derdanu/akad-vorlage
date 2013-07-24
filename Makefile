@@ -1,6 +1,6 @@
 filename = vorlage
 
-neededfiles = vorlage.tex abkuerzungen.tex einleitung.tex einstellungen.tex grundlagen.tex hauptteil.tex schluss.tex literatur.bib
+neededfiles = abkuerzungen.tex einleitung.tex einstellungen.tex grundlagen.tex hauptteil.tex schluss.tex literatur.bib
 
 
 UNAME_S := $(shell uname -s)
@@ -18,7 +18,7 @@ ifeq ($(UNAME_S), Darwin)
 endif
 
 
-all: $(neededfiles) latex clean
+all: $(filename).tex $(neededfiles) latex clean
 latex:
 	$(pdflatexcmd) $(filename)
 	$(bibtexcmd) $(filename)
