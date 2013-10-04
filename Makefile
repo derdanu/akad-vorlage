@@ -6,13 +6,13 @@ neededfiles = abkuerzungen.tex einleitung.tex einstellungen.tex grundlagen.tex h
 UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S), Linux)
-	pdflatexcmd = pdflatex
+	pdflatexcmd = pdflatex --shell-escape
 	bibtexcmd = bibtex
 	pdfviewercmd = atril
 endif
 
 ifeq ($(UNAME_S), Darwin)
-	pdflatexcmd = /usr/texbin/pdflatex
+	pdflatexcmd = /usr/texbin/pdflatex --shell-escape
 	bibtexcmd = /usr/texbin/bibtex
 	pdfviewercmd = open
 endif
