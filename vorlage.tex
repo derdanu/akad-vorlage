@@ -15,7 +15,7 @@
 
 
 \documentclass[a4paper,12pt]{article}
-\usepackage{german}
+\usepackage[ngerman]{babel}
 \usepackage[nottoc]{tocbibind} % Anzeigen des Literaturverzeichnisses im TOC
 \usepackage{epsfig}
 \usepackage{times}
@@ -53,10 +53,16 @@
 	citecolor=black
 ]{hyperref}
 
-
-
 \renewcommand{\familydefault}{\rmdefault}
 \renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
+
+%% Definition for Codeschnipsel im Fließtext
+\newcommand{\code}{\texttt}
+
+%% Für Codeblöcke mit Syntax-Highlighting
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/minted/
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
 
 \makeatother
 
