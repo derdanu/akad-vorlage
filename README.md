@@ -56,3 +56,4 @@ Es reicht eine einfaches "make" zum Erstellen der PDF.
 * Benötigte Packete
   * Um make nutzen zu können müssen die XCode Developer Commandline Tools installiert sein. https://developer.apple.com/xcode/
   * Latex Umgebung http://www.tug.org/mactex/
+  * Pygments - Installation mit "sudo easy_install Pygments"
