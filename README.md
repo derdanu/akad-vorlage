@@ -43,7 +43,7 @@ Es reicht eine einfaches "make" zum Erstellen der PDF.
 "make view" erstellt und zeigt diese auch sofort an.
 
 * Benötigte Packete bei einem Debian System installieren
-  * aptitude install git texlive textlive-lang-german textlive-latex-extra bibtex
+  * aptitude install make git texlive texlive-lang-german texlive-latex-extra bibtex python-pygments
 
 
 ## Mac OS X 
