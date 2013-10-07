@@ -23,10 +23,10 @@ Dateien
 
 Zum Erstellen folgende Latex Kommandos ausführen:
 
-	pdflatex vorlage
+	pdflatex --shell-escape vorlage
 	bibtex vorlage
-	pdflatex vorlage
-	pdflatex vorlage
+	pdflatex --shell-escape vorlage
+	pdflatex --shell-escape vorlage
 
 
 
