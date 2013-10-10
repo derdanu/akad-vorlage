@@ -33,7 +33,10 @@ Zum Erstellen folgende Latex Kommandos ausführen:
 ## Windows
 -------
 
-* Latex Portable Umgebung http://miktex.org/portable
+* Latex Umgebung http://miktex.org/download
+* make.bat ausführen
+
+* Bei aktuellen Problemen, dass Latex Packete nicht gefunden werden im MiKTeX Verzeichniss unter bin die Datei miktex-update_admin.exe ausführen
 
 ## Linux
 -----
