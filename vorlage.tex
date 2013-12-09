@@ -39,6 +39,7 @@
 \newif\iflistoffigures
 \newif\iflistoftables
 \newif\ifacronym
+\newif\iflistofformeln
 
 \include{einstellungen}
 \usepackage[
@@ -52,6 +53,8 @@
 	urlcolor=black,
 	citecolor=black
 ]{hyperref}
+
+\newfloat{Formel}{H}{for}
 
 \renewcommand{\familydefault}{\rmdefault}
 \renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
@@ -130,6 +133,13 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 \ifacronym
 \include{abkuerzungen}
 \fi
+
+% Formelverzeichnis
+\iflistofformeln
+\listof{Formel}{Formelübersicht}
+\newpage
+\fi
+
 
 \end{spacing} 
 
