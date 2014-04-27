@@ -44,6 +44,7 @@
 % getnonfreefonts -r
 % getnonfreefonts arial-urw
 
+\newif\ifappendix
 \newif\iflistoffigures
 \newif\iflistoftables
 \newif\ifacronym
@@ -171,23 +172,34 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 
 \begin{spacing}{1.5} % Zeilenabstand: 1,5 fuer den Textteil
 
+% Einleitung
 \include{einleitung}
 
-
+%Grundlagen
 \include{grundlagen}
 
-
+%Hauppteil
 \include{hauptteil}
 
-
+%Schluss
 \include{schluss}
 
 \end{spacing}
 
 \clearpage
 
-% Literaturverzeichniss - Ab hier wieder Roemische Seitenzahlen
 \pagestyle{plain}
+
+
+% Anhang 
+\ifappendix
+\appendix
+\input{anhang}
+\clearpage
+\fi
+
+% Literaturverzeichniss - Ab hier wieder Roemische Seitenzahlen
+
 \pagenumbering{roman}
 \setcounter{page}{\theromanPagenumber}
 \bibliographystyle{apalike}
@@ -197,6 +209,7 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 
 \pagestyle{empty} 
 \thispagestyle{empty}
+
 
 \begin{center}
 {\Large Eidesstattliche Erkl"arung}
