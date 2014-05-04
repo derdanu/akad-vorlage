@@ -35,10 +35,20 @@
 \usepackage{fancyhdr}
 \usepackage{float} % Notwendig fuer figure[h]
 \usepackage[printonlyused]{acronym}
+% Fuer Schriftart Arial
+%\usepackage[scaled]{uarial}
 
+% Installation der Arial Schriftart unter Linux.
+% wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
+% texlua install-getnonfreefonts
+% getnonfreefonts -r
+% getnonfreefonts arial-urw
+
+\newif\ifappendix
 \newif\iflistoffigures
 \newif\iflistoftables
 \newif\ifacronym
+\newif\iflistofformeln
 
 \include{einstellungen}
 \usepackage[
@@ -53,6 +63,10 @@
 	citecolor=black
 ]{hyperref}
 
+\newfloat{Formel}{H}{for}
+
+\renewcommand\UrlFont{\color{black}\rmfamily\itshape}
+
 \renewcommand{\familydefault}{\rmdefault}
 \renewcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
 
@@ -61,8 +75,9 @@
 
 %% Für Codeblöcke mit Syntax-Highlighting
 %% http://www.ctan.org/tex-archive/macros/latex/contrib/minted/
-\usepackage{minted}
-\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%% Einkommentieren fuer Minted Syntax Highlighting
+%\usepackage{minted}
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
 
 \makeatother
 
@@ -130,6 +145,13 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 \include{abkuerzungen}
 \fi
 
+% Formelverzeichnis
+\iflistofformeln
+\listof{Formel}{Formelübersicht}
+\newpage
+\fi
+
+
 \end{spacing} 
 
 \clearpage
@@ -150,23 +172,34 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 
 \begin{spacing}{1.5} % Zeilenabstand: 1,5 fuer den Textteil
 
+% Einleitung
 \include{einleitung}
 
-
+%Grundlagen
 \include{grundlagen}
 
-
+%Hauppteil
 \include{hauptteil}
 
-
+%Schluss
 \include{schluss}
 
 \end{spacing}
 
 \clearpage
 
-% Literaturverzeichniss - Ab hier wieder Roemische Seitenzahlen
 \pagestyle{plain}
+
+
+% Anhang 
+\ifappendix
+\appendix
+\input{anhang}
+\clearpage
+\fi
+
+% Literaturverzeichniss - Ab hier wieder Roemische Seitenzahlen
+
 \pagenumbering{roman}
 \setcounter{page}{\theromanPagenumber}
 \bibliographystyle{apalike}
@@ -176,6 +209,7 @@ Immatrikulationsnummer: \Immatrikulationsnummer
 
 \pagestyle{empty} 
 \thispagestyle{empty}
+
 
 \begin{center}
 {\Large Eidesstattliche Erkl"arung}

@@ -23,17 +23,20 @@ Dateien
 
 Zum Erstellen folgende Latex Kommandos ausführen:
 
-	pdflatex vorlage
+	pdflatex --shell-escape vorlage
 	bibtex vorlage
-	pdflatex vorlage
-	pdflatex vorlage
+	pdflatex --shell-escape vorlage
+	pdflatex --shell-escape vorlage
 
 
 
 ## Windows
 -------
 
-* Latex Portable Umgebung http://miktex.org/portable
+* Latex Umgebung http://miktex.org/download
+* make.bat ausführen
+
+* Bei aktuellen Problemen, dass Latex Packete nicht gefunden werden im MiKTeX Verzeichniss unter bin die Datei miktex-update_admin.exe ausführen
 
 ## Linux
 -----
@@ -43,7 +46,7 @@ Es reicht eine einfaches "make" zum Erstellen der PDF.
 "make view" erstellt und zeigt diese auch sofort an.
 
 * Benötigte Packete bei einem Debian System installieren
-  * aptitude install git texlive textlive-lang-german textlive-latex-extra bibtex
+  * aptitude install make git texlive texlive-lang-german texlive-latex-extra bibtex python-pygments
 
 
 ## Mac OS X 
