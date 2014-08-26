@@ -19,6 +19,8 @@ Dateien
 		Einstellungen
 		- Benutzer
 		- Anzeige der jeweiligen Verzeichnisse
+	commands.tex
+		Eigene Kommandos
 
 
 Zum Erstellen folgende Latex Kommandos ausführen:
