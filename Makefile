@@ -12,8 +12,8 @@ ifeq ($(UNAME_S), Linux)
 endif
 
 ifeq ($(UNAME_S), Darwin)
-	pdflatexcmd = /usr/texbin/pdflatex --shell-escape
-	bibtexcmd = /usr/texbin/bibtex
+	pdflatexcmd = /usr/local/texlive/2017/bin/x86_64-darwin/pdflatex --shell-escape
+	bibtexcmd = /usr/local/texlive/2017/bin/x86_64-darwin/bibtex
 	pdfviewercmd = open
 endif
 
